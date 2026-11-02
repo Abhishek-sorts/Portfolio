@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  @apply font-sans text-slate-800 antialiased dark:text-slate-100;
+  background-color: #F8F9FD;
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(108,92,231,.10), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(0,206,206,.10), transparent 35%),
+    linear-gradient(rgba(100,116,139,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100,116,139,.07) 1px, transparent 1px);
+  background-size: auto, auto, 40px 40px, 40px 40px;
+  background-attachment: fixed;
+}
+.dark body {
+  background-color: #0F172A;
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(108,92,231,.25), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(0,206,206,.14), transparent 35%),
+    linear-gradient(rgba(148,163,184,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,.06) 1px, transparent 1px);
+}
+.glass {
+  @apply rounded-2xl border border-slate-200/60 bg-white/70 shadow-lg backdrop-blur-xl
+         dark:border-violet1/30 dark:bg-slate-900/60 dark:shadow-[0_0_24px_-8px_rgba(108,92,231,.55)];
+}
+.gradient-text {
+  @apply bg-brand-gradient bg-clip-text text-transparent;
+}
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-gradient px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet1/30 transition hover:brightness-110;
+}
+.btn-glass {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300/70 bg-white/50 px-5 py-3 text-sm font-semibold backdrop-blur transition hover:bg-white/80 dark:border-slate-600 dark:bg-slate-800/40 dark:hover:bg-slate-800/70;
+}
+.pill {
+  @apply rounded-full border border-violet1/20 bg-violet1/10 px-3 py-1 text-xs font-medium text-violet1 dark:text-violet-300;
+}
+.section-title { @apply text-3xl font-extrabold tracking-tight sm:text-4xl; }
